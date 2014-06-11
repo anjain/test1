@@ -1,11 +1,21 @@
 class MarksController < ApplicationController
-  
+  #before_action :signed_in_user, only: [:index, :edit, :update]
+  #efore_action :correct_user,   only: [:edit, :update]
+
+  def index
+     @mark=Mark.all
+
+  end
+
+
+
+
    def show
   @mark = Mark.find(params[:id])
   end
   
 
-  def AddMarks
+  def addmarks
   	@mark=Mark.new
   end
   
@@ -13,12 +23,11 @@ class MarksController < ApplicationController
     def create
     @mark = Mark.new(user_params)
     if @mark.save
-      # Handle a successful save.
+      redirect_to marks_path
     else
-      render 'new'
+      redirect_to addmarks_path
     end
   end
-
 
   private
 

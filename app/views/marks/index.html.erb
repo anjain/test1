@@ -1,0 +1,26 @@
+<% provide(:title, 'All Student') %>
+<h1>All users</h1>
+<div class="table-responsive">
+ <table class="table table-bordered table table-hover table table-striped tablewidth">
+ <tr>
+  <td> Name</td>
+  <td> Email </td>
+  <td> Physics</td>
+  <td> Chemistry </td>
+  <td> Mathes </td>
+   <td> total Marks </td>
+
+   <% @mark.each do |p| %>
+   
+  <tr>
+  <td><%=p.name%></td>
+  <td><%=p.email%></td>
+  <td><%=p.phy%></td>
+  <td><%=p.chem%></td>
+  <td><%=p.math%></td>
+  <td><%=(p.math+p.phy+p.chem)%></td>
+  </tr>
+<% end %>
+</tr>
+</table>
+</div>
