@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140611074518) do
+ActiveRecord::Schema.define(version: 20140611140756) do
 
   create_table "marks", force: true do |t|
     t.integer  "physics"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20140611074518) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
+    t.integer  "total"
   end
 
   add_index "marks", ["user_id", "created_at"], name: "index_marks_on_user_id_and_created_at"

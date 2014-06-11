@@ -1,0 +1,21 @@
+<h1>WELCOME ADMIN</h1>
+<p>enter marks from here</p>
+<%= form_for @marks, url: marks_path, method: :post do |f| %>
+ <div class="field">
+   <%= f.label :email %>
+   <%= f.text_area :email, placeholder: "enter marks..." %>
+  </div>
+  <div class="field">
+   <%= f.label :physics %>
+   <%= f.text_area :physics, placeholder: "enter marks..." %>
+  </div>
+  <div class="field">
+  <%= f.label :chamistry %>
+    <%= f.text_area :chamistry, placeholder: "enter marks..." %>
+  </div>
+  <div class="field">
+  <%= f.label :maths%>
+    <%= f.text_area :maths, placeholder: "enter marks..." %>
+  </div>
+  <%= f.submit "save", class: "btn btn-large btn-primary" %>
+<% end %>
