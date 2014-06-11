@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
 		@student = Student.find(params[:id])
 
 		@record = Record.find_by_email(@student.email)
-		@recordall = Record.all
+		@recordemail = Record.pluck(:email)
 	end
 
 	def create
