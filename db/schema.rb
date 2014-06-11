@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140611070157) do
+ActiveRecord::Schema.define(version: 20140611083453) do
 
   create_table "marks", force: true do |t|
     t.string   "name"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20140611070157) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
-    t.string   "role_id"
+    t.boolean  "admin"
   end
 
 end
