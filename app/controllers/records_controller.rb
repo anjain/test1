@@ -1,5 +1,5 @@
 class RecordsController < ApplicationController
-	before_action :signed_in_user, only: [:create]
+	before_action :signed_in_user, only: [:new, :show]
     
 
 	def new
