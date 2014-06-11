@@ -1,0 +1,28 @@
+<% provide(:title, 'Sign up') %>
+<h1>Hello Admin</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+  	<form action="/records" class="new_user" id="new_user" method="post">
+    <%= form_for(@record) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :mathno, "Math Number" %>
+      <%= f.text_field :mathno %>
+
+      <%= f.label :physicsno, "Physics Number" %>
+      <%= f.text_field :physicsno %>
+
+      <%= f.label :chemistryno, "Chemistry Number" %>
+      <%= f.text_field :chemistryno %>
+
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

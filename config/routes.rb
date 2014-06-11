@@ -2,6 +2,17 @@ Test1::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  resources :students
+  resources :records
+  resources :logins, only: [:new, :create, :destroy]
+
+  root "students#index"
+  match '/signup', to: 'students#new', via: 'get'
+  match '/signin', to: 'logins#new', via:'get'
+  match '/signout', to: 'logins#destroy', via: 'delete'
+  match '/resultcard', to: 'records#show', via: 'get'
+
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

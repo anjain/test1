@@ -1,0 +1,17 @@
+<% @record.each do |r|%>
+<center>
+<table border= "1">
+	<tr>
+		<th>Name:</th>
+		<th>Total Marks:</th>
+	</tr>
+	<tr>
+	
+		<td><%= r.name %> </td> 
+        <td> <%= r.mathno+r.physicsno+r.chemistryno %></td>
+    </tr>
+
+</table>
+</center>
+
+<% end %>
