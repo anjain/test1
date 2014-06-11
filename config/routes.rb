@@ -1,4 +1,13 @@
 Test1::Application.routes.draw do
+   resources :users
+  
+  root  'static_pages#home'
+  resources :sessions,   only: [:new, :create, :destroy]
+   match '/signin',  to: 'sessions#new',         via: 'get'
+   match '/signup',  to: 'users#new',            via: 'get'
+   match '/admin',  to: 'static_pages#admin',     via: 'get'
+   match '/student',  to: 'static_pages#student', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
