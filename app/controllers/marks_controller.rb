@@ -7,6 +7,11 @@ class MarksController < ApplicationController
 
   end
 
+  def sresult
+    logger.debug current_user.inspect
+    e=current_user.email
+    @mark=Mark.find_by(email:e)
+   end
 
 
 

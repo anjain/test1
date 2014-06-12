@@ -13,6 +13,7 @@ Test1::Application.routes.draw do
   match '/addmarks',  to: 'marks#addmarks',         via: 'get'
   match '/signin',    to: 'sessions#signin',        via: 'get'
   match '/signout',   to: 'sessions#destroy',       via: 'delete'
+  match '/sresult',   to: 'marks#sresult',          via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

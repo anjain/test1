@@ -8,19 +8,19 @@
   <td> Physics</td>
   <td> Chemistry </td>
   <td> Mathes </td>
-   <td> total Marks </td>
+  <td> total Marks </td>
 
-   <% @mark.each do |p| %>
-   
+  
   <tr>
-  <td><%=p.name%></td>
-  <td><%=p.email%></td>
-  <td><%=p.phy%></td>
-  <td><%=p.chem%></td>
-  <td><%=p.math%></td>
-  <td><%=(p.math+p.phy+p.chem)%></td>
+  <td><%=@mark.name%></td>
+  <td><%=@mark.email%></td>
+  <td><%=@mark.phy%></td>
+  <td><%=@mark.chem%></td>
+  <td><%=@mark.math%></td>
+  <td><%=(@mark.math+@mark.phy+@mark.chem)%></td>
   </tr>
-<% end %>
+ 
 </tr>
 </table>
 </div>
+<%= link_to "Show All Result >>", marks_path , class: "btn btn-large btn-default" %>

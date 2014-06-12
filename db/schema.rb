@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140611082106) do
+ActiveRecord::Schema.define(version: 20140612085734) do
 
   create_table "marks", force: true do |t|
     t.string   "name"
@@ -36,6 +36,9 @@ ActiveRecord::Schema.define(version: 20140611082106) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.boolean  "admin"
+    t.string   "remember_token"
   end
+
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
 end
