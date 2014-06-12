@@ -1,4 +1,17 @@
 Test1::Application.routes.draw do
+ 
+
+  
+
+ 
+  get 'admins/new'
+  match '/admins/login',    to: 'admins#login',    via: 'get'
+  match '/admins/result',   to: 'admins#result',   via: 'get' 
+  
+  get :search, to: 'admins#search'
+    resources :admins
+  #get "login/new"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

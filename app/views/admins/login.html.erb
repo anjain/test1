@@ -1,0 +1,15 @@
+<h1>Login Page</h1>
+
+<% provide(:title, 'Login Page') %>
+<h1>Student Record</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_tag search_path, method: :get do %>
+
+      <%= label_tag :name %>
+      <%= text_field_tag :search, params[:search] %>
+       <%= submit_tag 'search' %>
+      <% end %>
+  </div>
+</div>

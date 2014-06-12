@@ -1,0 +1,28 @@
+<h1>Admins#new</h1>
+
+<% provide(:title, 'Student Record') %>
+<h1>Student Record</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@admin) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :physics %>
+      <%= f.text_field :physics %>
+
+      <%= f.label :chemistry %>
+      <%= f.text_field :chemistry %>
+
+      <%= f.label :math %>
+      <%= f.text_field :math %>
+
+      <%= f.submit "submit Data", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

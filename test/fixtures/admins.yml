@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  physics: 1
+  chemistry: 1
+  math: 1
+
+two:
+  name: MyString
+  email: MyString
+  physics: 1
+  chemistry: 1
+  math: 1
