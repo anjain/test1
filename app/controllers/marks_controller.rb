@@ -16,7 +16,17 @@ class MarksController < ApplicationController
     end
   end
   def student
+    logger.debug current_user.inspect
+    eml=current_user.email
+    @marks=Marks.find_by(email:eml)
+    @user=User.find_by(email:eml)
+   end
+
+  def all
+     @user=User.all
+     @marks=Marks.all
   end
+
   def marks_params
       params.require(:marks).permit(:email, :physics, :chamistry,
                                    :maths)

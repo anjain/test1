@@ -1,0 +1,17 @@
+<h1>RESULT OF ALL STUDENTS</h1>
+<div class="table-responsive">
+ <table class="table table-bordered table table-hover table table-striped tablewidth">
+ <tr>
+  <td>Name</td>
+   <td> total Marks </td>
+
+   <% @marks.each do |p| %>
+   <%@user=User.find_by(email:p.email)%>
+  <tr>
+  <td><%=@user.name%></td>
+  <td><%=p.total%></td>
+  </tr>
+<% end %>
+</tr>
+</table>
+</div>

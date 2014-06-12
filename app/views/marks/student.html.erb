@@ -1,1 +1,24 @@
 <h1>WELCOME STUDENT</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Physics:</strong>
+  <%= @marks.physics %>
+</p>
+
+<p>
+  <strong>Chamistry:</strong>
+  <%= @marks.chamistry %>
+</p>
+<p>
+  <strong>Maths:</strong>
+  <%= @marks.maths %>
+</p>
+<p>
+  <strong>Total:</strong>
+  <%= @marks.total %>
+</p>
+<p> To view result of all students <%= link_to "Click here!", all_path %></p>

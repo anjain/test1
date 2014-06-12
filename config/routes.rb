@@ -10,6 +10,9 @@ Test1::Application.routes.draw do
    match '/signup',  to: 'users#new',            via: 'get'
    match '/admin',   to: 'marks#admin',          via: 'get'
    match '/student',  to: 'marks#student',        via: 'get'
+   match  '/all',     to: 'marks#all',            via: 'get'
+
+
    post "/marks", to: 'marks#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
