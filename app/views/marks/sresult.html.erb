@@ -1,8 +1,12 @@
 <% provide(:title, 'All Student') %>
+
+
+<% if @mark != nil %>
 <h1>All STUDENT</h1>
 <div class="table-responsive">
  <table class="table table-bordered table table-hover table table-striped tablewidth">
  <tr>
+  <td> Rank</td>
   <td> Name</td>
   <td> Email </td>
   <td> Physics</td>
@@ -12,6 +16,7 @@
 
   
   <tr>
+  <td><%=@r%></td>
   <td><%=@mark.name%></td>
   <td><%=@mark.email%></td>
   <td><%=@mark.phy%></td>
@@ -24,3 +29,8 @@
 </table>
 </div>
 <%= link_to "Show All Result >>", marks_path , class: "btn btn-large btn-default" %>
+
+<% else %>
+   <h1>Result Not Found !</h1>
+   <%= link_to "Show Others Result >>", marks_path , class: "btn btn-large btn-default" %>
+ <% end %>  

@@ -15,6 +15,7 @@ end
     if @user.save
       redirect_to root_path
     else
+      flash[:error]="email is already taken"
       render 'new'
     end
   end

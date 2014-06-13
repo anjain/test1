@@ -10,14 +10,47 @@ class MarksController < ApplicationController
   def sresult
     logger.debug current_user.inspect
     e=current_user.email
+    @m=Mark.all
     @mark=Mark.find_by(email:e)
-   end
+    
+  
+     a=[] 
+    $total 
+    @r
+   
+    @m.each do |p| 
+     a << (p.math+p.phy+p.chem)
+    end 
+   a=a.uniq
+   a.sort!
+   a.reverse!
 
-
-
-   def show
-  @mark = Mark.find(params[:id])
+    @m.each do |p| 
+    if e==p.email 
+      $total=(p.math+p.phy+p.chem)
+     end  
+     end 
+     
+     
+    count=0
+    a.each do |x|
+     count+=1 
+       if $total == x
+         @r=count 
+          break 
+      end 
+    end  
+   
   end
+  
+   
+
+  
+
+  def show
+    @mark = Mark.find(params[:id])
+   end
+  
   
 
   def addmarks
@@ -30,6 +63,7 @@ class MarksController < ApplicationController
     if @mark.save
       redirect_to marks_path
     else
+      flash[:notice]="One Student Has Only One Record"
       redirect_to addmarks_path
     end
   end
